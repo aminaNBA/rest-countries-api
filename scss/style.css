@@ -78,7 +78,7 @@ nav.dark {
   border-radius: 5px;
   font-size: 1rem;
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 775px) {
   .main-page header .container .search-by-name > .search {
     justify-content: center;
     padding: 0.8rem 2rem 0.8rem 3rem;
@@ -129,7 +129,7 @@ nav.dark {
   align-items: flex-start;
   gap: 3rem;
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 775px) {
   .main-page .countries .container {
     justify-content: center;
   }
