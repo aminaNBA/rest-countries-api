@@ -1,0 +1,24 @@
+home page 
+
+input field to research by name (left corner)
+select button to research by region (right corner)
+
+
+flag 
+name of country
+population
+region
+capital
+
+==========================================
+Detail page 
+name
+native name
+region
+capital
+currency
+populatio
+sub region
+top level domain
+languages
+border countries ( when you click on it each country has a detail page)
