@@ -19,10 +19,10 @@ body {
 // GLOBAL CLASSES
 
 nav {
+  
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: $Light_bg;
   color: $Light_Text;
-
   .container {
     @include flexbox(center);
 
@@ -45,6 +45,18 @@ nav {
 
       i {
         margin-right: 5px;
+      }
+      & .title-dark{
+        display:inline-block;
+        &.hide{
+          display: none;
+        }
+      }
+      & .title-light{
+        display: none;
+        &.show{
+          display: inline-block;
+        }
       }
     }
   }
@@ -81,7 +93,10 @@ nav {
         }
 
         > .search {
-          padding: 0.8rem 8rem 0.8rem 3rem;
+          @include responsive(Small_Screens){
+           padding-left: 3rem; 
+          }
+          padding: 0.8rem 5rem 0.8rem 3rem;
           box-shadow: rgba(50, 100, 111, 0.2) 0px 7px 29px 0px;
           outline: none;
           border: none;
@@ -96,6 +111,12 @@ nav {
       }
 
       .filter-by-region {
+        @include responsive(Small_Screens){
+          margin-top:2rem;
+        }
+        @include responsive(phone){
+          margin-top:2rem;
+        }
         position: relative;
         cursor: pointer;
         padding: 0.8rem 1rem 0.8rem;
@@ -146,6 +167,9 @@ nav {
       @include flexbox(flex-start);
       gap: 3rem;
 
+      @include responsive(Small_Screens) {
+        justify-content: center;
+      }
       @include responsive(phone) {
         justify-content: center;
       }
@@ -155,6 +179,7 @@ nav {
         border-radius: 5px;
         cursor: pointer;
         height: 470px;
+        
 
         &.dark {
           background-color: $Dark_El;
@@ -167,6 +192,10 @@ nav {
             height: 200px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+            @include responsive(Small_Screens) {
+              width: 320px;
+            }
+            
           }
         }
 
@@ -230,6 +259,14 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include responsive(Small_Screens){
+          flex-direction: column;
+          justify-content: center;
+        }
+        @include responsive(phone){
+          flex-direction: column;
+          justify-content: center;
+        }
 
         .flag {
           img {
@@ -238,6 +275,12 @@ nav {
         }
 
         .more-details {
+          @include responsive(Small_Screens){
+            margin-left:0;
+          }
+          @include responsive(phone){
+            margin-left:0;
+          }
           margin-left: 7rem;
           display: grid;
           grid-template-columns: repeat(2, 1fr);

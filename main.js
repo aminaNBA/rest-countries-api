@@ -94,6 +94,7 @@ search.addEventListener("keyup", (e) => {
 const showContinent = document.querySelector(".filter-by-region");
 const continents = showContinent.querySelectorAll("li");
 const continent = document.querySelector(".continent");
+const titleContinent = document.querySelector(".filter-by-region span")
 
 showContinent.addEventListener("click", () => {
   continent.classList.toggle("show-continent");
@@ -103,6 +104,7 @@ continents.forEach((continent) => {
   continent.addEventListener("click", () => {
     const countryRigion = document.querySelectorAll(".country-region");
     const value = continent.textContent;
+    titleContinent.textContent = continent.textContent
     countryRigion.forEach((region) => {
       if (region.innerHTML.indexOf(value) > -1 || value === "All") {
         region.parentElement.parentElement.style.display = "";
@@ -117,6 +119,9 @@ continents.forEach((continent) => {
 const switchBtn = document.querySelector(".switch-theme");
 const darkMode = document.querySelector(".switch-theme .dark");
 const lightMode = document.querySelector(".switch-theme .light");
+const titleThemeDark = document.querySelector(".switch-theme .title-dark")
+
+const titleThemeLight = document.querySelector(".switch-theme .title-light")
 const nabvar = document.querySelector("nav");
 
 switchBtn.addEventListener("click", swicherTheme);
@@ -128,4 +133,6 @@ function swicherTheme() {
   nabvar.classList.toggle("dark");
   showContinent.classList.toggle("dark");
   continent.classList.toggle('dark')
+  titleThemeLight.classList.toggle('show')
+  titleThemeDark.classList.toggle('hide')
 }

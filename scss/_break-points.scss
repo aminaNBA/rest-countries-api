@@ -5,12 +5,12 @@
         };
     }
     @if $breakpoint==Small_Screens {
-        @media only screen and (min-width: 576px) and (max-width:775px) {
+        @media only screen and (min-width: 576px) and (max-width:767px) {
             @content
         };
     }
     @if $breakpoint==Medium_Screens {
-        @media only screen and (min-width: 776px) and (max-width:991px) {
+        @media only screen and (min-width: 768px) and (max-width:991px) {
             @content
         };
     }
