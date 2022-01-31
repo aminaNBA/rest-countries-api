@@ -77,7 +77,9 @@ function showCountryDetails(country) {
 // SEARCH COUNTIES WITH NAME
 const search = document.getElementById("search");
 search.addEventListener("keyup", (e) => {
-  const { value } = e.target;
+  const {
+    value
+  } = e.target;
   const countryName = document.querySelectorAll(".country-name");
   countryName.forEach((name) => {
     if (name.innerHTML.toLowerCase().includes(value.toLowerCase())) {
@@ -116,11 +118,6 @@ const switchBtn = document.querySelector(".switch-theme");
 const darkMode = document.querySelector(".switch-theme .dark");
 const lightMode = document.querySelector(".switch-theme .light");
 const nabvar = document.querySelector("nav");
-const card = document.querySelector(".country");
-const cardInfo = document.querySelector(".country .infos");
-
-
-
 
 switchBtn.addEventListener("click", swicherTheme);
 
@@ -129,7 +126,6 @@ function swicherTheme() {
   darkMode.classList.toggle("show");
   lightMode.classList.toggle("hidden");
   nabvar.classList.toggle("dark");
-  card.classList.toggle("dark");
-  cardInfo.classList.toggle("dark");
   showContinent.classList.toggle("dark");
+  continent.classList.toggle('dark')
 }

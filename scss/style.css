@@ -78,7 +78,7 @@ nav.dark {
   border-radius: 5px;
   font-size: 1rem;
 }
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 575px) {
   .main-page header .container .search-by-name > .search {
     justify-content: center;
     padding: 0.8rem 2rem 0.8rem 3rem;
@@ -94,7 +94,7 @@ nav.dark {
 }
 .main-page header .container .filter-by-region.dark {
   background-color: #2b3945;
-  color: #111517;
+  color: white;
 }
 .main-page header .container .filter-by-region i {
   margin-left: 3rem;
@@ -110,12 +110,12 @@ nav.dark {
   background-color: #fafafa;
   width: 11rem;
 }
+.main-page header .container .filter-by-region .continent.dark {
+  background-color: #2b3945;
+  color: white;
+}
 .main-page header .container .filter-by-region .continent.show-continent {
   display: inline-block;
-}
-.main-page header .container .filter-by-region .continent.show-continent.dark {
-  background-color: #2b3945;
-  color: red;
 }
 .main-page header .container .filter-by-region .continent li {
   list-style: none;
@@ -129,7 +129,7 @@ nav.dark {
   align-items: flex-start;
   gap: 3rem;
 }
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 575px) {
   .main-page .countries .container {
     justify-content: center;
   }
@@ -138,6 +138,7 @@ nav.dark {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
   cursor: pointer;
+  height: 470px;
 }
 .main-page .countries .container .country.dark {
   background-color: #2b3945;
@@ -158,7 +159,7 @@ nav.dark {
   color: #fff;
 }
 .main-page .countries .container .country .infos .country-name {
-  max-width: 30px;
+  max-width: 40px;
 }
 
 .detail-page {

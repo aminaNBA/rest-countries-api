@@ -71,7 +71,7 @@ nav {
       .search-by-name {
         position: relative;
 
-        >i {
+        > i {
           position: absolute;
           top: 50%;
           left: 1rem;
@@ -80,7 +80,7 @@ nav {
           font-size: 1.2rem;
         }
 
-        >.search {
+        > .search {
           padding: 0.8rem 8rem 0.8rem 3rem;
           box-shadow: rgba(50, 100, 111, 0.2) 0px 7px 29px 0px;
           outline: none;
@@ -105,7 +105,7 @@ nav {
 
         &.dark {
           background-color: $Dark_El;
-          color: $Light_Text;
+          color: $Dark_Text;
         }
 
         i {
@@ -113,6 +113,11 @@ nav {
         }
 
         .continent {
+          &.dark {
+            background-color: $Dark_El;
+            color: $Dark_Text;
+          }
+
           position: absolute;
           display: none;
           top: 80%;
@@ -125,11 +130,6 @@ nav {
 
           &.show-continent {
             display: inline-block;
-
-            &.dark {
-              background-color: $Dark_El;
-              color: red;
-            }
           }
 
           li {
@@ -154,6 +154,7 @@ nav {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 5px;
         cursor: pointer;
+        height: 470px;
 
         &.dark {
           background-color: $Dark_El;
@@ -178,7 +179,7 @@ nav {
           }
 
           .country-name {
-            max-width: 30px;
+            max-width: 40px;
           }
         }
       }
@@ -212,7 +213,7 @@ nav {
     font-size: 1rem;
     text-decoration: none;
 
-    >i {
+    > i {
       margin-right: 1rem;
     }
   }
